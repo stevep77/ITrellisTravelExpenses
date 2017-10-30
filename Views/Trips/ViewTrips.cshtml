@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebApplication1.Models.TripModel>
+
+<p>
+    <h1>iTrellis Trips Costs</h1>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TripId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TripAmount1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TripAmount2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TripAmount3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TripAmount4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripAmount1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripAmount2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripAmount3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripAmount4)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+
+    
+}
+
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            Trips Total
+        </th>
+        <th>
+            Shared Costs (Tatal / 3 )
+        </th>
+    </tr>
+    <tr>
+        <td>$217.18</td>
+        <td>$72.39</td>
+    </tr>    
+</table>
+<hr/>
+<p>
+    <h2>Reconciliation</h2>
+    <p> Louis owes David: $18.85</p>
+    <p> Carter owes David: $22.16</p>
+</p>
